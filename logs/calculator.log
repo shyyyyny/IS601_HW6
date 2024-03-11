@@ -1,0 +1,10 @@
+2024-03-10 15:12:35,052 - root - INFO - Logging configured.
+2024-03-10 15:12:47,271 - root - INFO - Performing addition operation: 45 + 75
+2024-03-10 15:12:47,273 - root - INFO - Addition result: 120
+2024-03-10 15:12:57,231 - root - INFO - Performing division operation: 5 / 0
+2024-03-10 15:12:57,232 - root - ERROR - Division by zero error
+2024-03-10 15:13:08,427 - root - INFO - Performing multiplication operation: 34 * 62
+2024-03-10 15:13:08,429 - root - INFO - Multiplication result: 2108
+2024-03-10 15:13:21,764 - root - INFO - Performing subtraction operation: 90 - 55
+2024-03-10 15:13:21,766 - root - INFO - Subtraction result: 35
+2024-03-10 15:13:24,353 - root - INFO - Exiting...
