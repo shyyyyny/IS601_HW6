@@ -1,5 +1,7 @@
-import pytest
+'''Test Calculator.py'''
+
 from decimal import Decimal
+import pytest
 from calculator import Calculator
 
 
@@ -13,28 +15,31 @@ from calculator import Calculator
     ],
 )
 def test_operation(a, b, operation, expected):
+    """Test Operation"""
     result = Calculator.load_operation(operation)(a, b)
     assert result == expected, f"{operation} operation failed"
 
 
 def test_divide_by_zero():
+    """Test Divide by Zero"""
     with pytest.raises(ZeroDivisionError):
         Calculator.load_operation("divide")(Decimal("10"), Decimal("0"))
 
 
 def test_load_invalid_operation():
+    """Test load invalid operation"""
 
     with pytest.raises(ValueError):
         Calculator.load_operation("invalid_operation")
 
 
 def test_load_unknown_operation():
-
+    """Test load unknown operation"""
     with pytest.raises(ValueError):
         Calculator.load_operation("unknown_operation")
 
 
 def test_load_operation_operation_not_found():
-
+    """Test load opearation not found"""
     with pytest.raises(ValueError):
         Calculator.load_operation("operation_not_found")

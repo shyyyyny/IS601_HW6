@@ -1,10 +1,13 @@
-import pytest
+"""Test Main.py"""
+
 from decimal import Decimal
+import pytest
 from calculator import Calculator
 from main import calculate_and_print
 
 
 def test_divide_by_zero():
+    """Test Divide by Zero"""
     with pytest.raises(ZeroDivisionError):
         Calculator.load_operation("divide")(Decimal("10"), Decimal("0"))
 
@@ -39,6 +42,7 @@ def test_divide_by_zero():
     ],
 )
 def test_calculate_and_print(a, b, operation, expected, capsys):
+    """Test Calculate and Print"""
     calculate_and_print(a, b, operation)
     captured = capsys.readouterr()
     assert captured.out.strip() == expected
